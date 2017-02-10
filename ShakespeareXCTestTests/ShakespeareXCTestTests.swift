@@ -30,23 +30,28 @@ class ShakespeareXCTestTests: XCTestCase {
     
     func testWordCountsAreCorrect() {
         let playData = PlayData()
-        XCTAssertEqual(playData.wordCounts["home"], 174, "home does not appear 174 times")
-        XCTAssertEqual(playData.wordCounts["BOTTOM"], 55, "BOTTOM does not appear 55 times")
-        XCTAssertEqual(playData.wordCounts["swearing"], 10, "swearing does not appear 10 times")
+        XCTAssertEqual(playData.wordCounts.count(for: "home"), 174, "home does not appear 174 times")
+        XCTAssertEqual(playData.wordCounts.count(for: "BOTTOM"), 55, "BOTTOM does not appear 55 times")
+        XCTAssertEqual(playData.wordCounts.count(for: "swearing"), 10, "swearing does not appear 10 times")
     }
     
-    
+
+    func testWordsLoadQuickly() {
+        measure {
+            _ = PlayData()
+        }
+    }
     
 //    func testExample() {
 //        // This is an example of a functional test case.
 //        // Use XCTAssert and related functions to verify your tests produce the correct results.
 //    }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            _ = PlayData()
-        }
-    }
+//    func testPerformanceExample() {
+//        // This is an example of a performance test case.
+//        self.measure {
+//            _ = PlayData()
+//        }
+//    }
     
 }
