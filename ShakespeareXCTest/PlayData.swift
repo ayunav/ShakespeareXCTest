@@ -11,6 +11,7 @@ import Foundation
 class PlayData {
     
     var allWords = [String]()
+    private(set) var filteredWords = [String]()
     
     var wordCounts: NSCountedSet!
     
@@ -21,9 +22,25 @@ class PlayData {
                 allWords = allWords.filter { $0 != "" }
                 
                 wordCounts = NSCountedSet(array: allWords)
-                allWords = wordCounts.allObjects as! [String]
+                let sorted = wordCounts.allObjects.sorted { (by: wordCounts.count(for: $0) > wordCounts.count(for: $1)) }
+                allWords = sorted as! [String]
             }
+        }
+        
+        applyUserFilter("swift")
+    }
+    
+    
+    func applyUserFilter(_ input: String) {
+        if let inputNumber = Int(input) {
+            applyFilter { self.wordCounts.count(for: $0) >= inputNumber}
+        } else {
+            applyFilter { $0.range(of: input, options: .caseInsensitive) != nil }
         }
     }
     
+    
+    func applyFilter(_ filter: (String) -> Bool) {
+        filteredWords = allWords.filter(filter)
+    }
 }
