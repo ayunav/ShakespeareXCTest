@@ -14,6 +14,8 @@
 		D95AAA891E4D6816001662B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D95AAA871E4D6816001662B8 /* LaunchScreen.storyboard */; };
 		D95AAA941E4D6816001662B8 /* ShakespeareXCTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95AAA931E4D6816001662B8 /* ShakespeareXCTestTests.swift */; };
 		D95AAA9F1E4D6816001662B8 /* ShakespeareXCTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95AAA9E1E4D6816001662B8 /* ShakespeareXCTestUITests.swift */; };
+		D95AAAAD1E4D6C1C001662B8 /* PlayData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95AAAAC1E4D6C1B001662B8 /* PlayData.swift */; };
+		D95AAAAF1E4D6CBB001662B8 /* plays.txt in Resources */ = {isa = PBXBuildFile; fileRef = D95AAAAE1E4D6CBB001662B8 /* plays.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		D95AAA9A1E4D6816001662B8 /* ShakespeareXCTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShakespeareXCTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D95AAA9E1E4D6816001662B8 /* ShakespeareXCTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakespeareXCTestUITests.swift; sourceTree = "<group>"; };
 		D95AAAA01E4D6816001662B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D95AAAAC1E4D6C1B001662B8 /* PlayData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayData.swift; sourceTree = "<group>"; };
+		D95AAAAE1E4D6CBB001662B8 /* plays.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = plays.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +102,13 @@
 			isa = PBXGroup;
 			children = (
 				D95AAA7E1E4D6816001662B8 /* AppDelegate.swift */,
+				D95AAAAC1E4D6C1B001662B8 /* PlayData.swift */,
 				D95AAA801E4D6816001662B8 /* ViewController.swift */,
 				D95AAA821E4D6816001662B8 /* Main.storyboard */,
 				D95AAA851E4D6816001662B8 /* Assets.xcassets */,
 				D95AAA871E4D6816001662B8 /* LaunchScreen.storyboard */,
 				D95AAA8A1E4D6816001662B8 /* Info.plist */,
+				D95AAAAE1E4D6CBB001662B8 /* plays.txt */,
 			);
 			path = ShakespeareXCTest;
 			sourceTree = "<group>";
@@ -235,6 +241,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D95AAAAF1E4D6CBB001662B8 /* plays.txt in Resources */,
 				D95AAA891E4D6816001662B8 /* LaunchScreen.storyboard in Resources */,
 				D95AAA861E4D6816001662B8 /* Assets.xcassets in Resources */,
 				D95AAA841E4D6816001662B8 /* Main.storyboard in Resources */,
@@ -262,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D95AAAAD1E4D6C1C001662B8 /* PlayData.swift in Sources */,
 				D95AAA811E4D6816001662B8 /* ViewController.swift in Sources */,
 				D95AAA7F1E4D6816001662B8 /* AppDelegate.swift in Sources */,
 			);
