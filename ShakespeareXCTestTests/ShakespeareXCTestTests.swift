@@ -42,6 +42,32 @@ class ShakespeareXCTestTests: XCTestCase {
         }
     }
     
+    
+    func testUserFilterWorks() {
+        let playData = PlayData()
+        
+        playData.applyUserFilter("play")
+        XCTAssertEqual(playData.filteredWords.count, 15, "the word count for play is not 15")
+        
+        playData.applyUserFilter("100")
+        XCTAssertEqual(playData.filteredWords.count, 495, "the word count for 100 is not 495")
+        
+        playData.applyUserFilter("1000")
+        XCTAssertEqual(playData.filteredWords.count, 55, "the word count for 1000 is not 55")
+        
+        playData.applyUserFilter("10000")
+        XCTAssertEqual(playData.filteredWords.count, 1, "the word count for 10000 is not 1")
+        
+        playData.applyUserFilter("test")
+        XCTAssertEqual(playData.filteredWords.count, 56, "the word count for test is not 56")
+        
+        playData.applyUserFilter("swift")
+        XCTAssertEqual(playData.filteredWords.count, 7, "the word count for swift is not 7")
+        
+        playData.applyUserFilter("objective-c")
+        XCTAssertEqual(playData.filteredWords.count, 0, "the word count for objective-c is not 0")
+    }
+    
 //    func testExample() {
 //        // This is an example of a functional test case.
 //        // Use XCTAssert and related functions to verify your tests produce the correct results.
